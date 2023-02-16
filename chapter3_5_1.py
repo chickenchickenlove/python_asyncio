@@ -9,11 +9,14 @@ future = asyncio.Future()
 print(future.done())
 
 loop = asyncio.get_event_loop()
+loop.create_task()
 coro = main(future)
 task = loop.create_task(coro)
 loop.run_until_complete(task)
 
 print(future.done(), future.result())
+
+
 
 
 
