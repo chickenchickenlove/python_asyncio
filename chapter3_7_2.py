@@ -1,10 +1,12 @@
 import asyncio
-import aioredis
+import aiohttp
 
-async def create_redis(h): pass
-async def do_something_with(value): pass
+
 
 async def main():
+
+    aiohttp.ClientSession()
+
     redis = await create_redis(('localhost', 6379))
     keys = ['Americas', 'Africa', 'Europe', 'Asia']
 
